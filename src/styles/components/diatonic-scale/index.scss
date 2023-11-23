@@ -1,0 +1,10 @@
+.diatonic-scale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+  position: relative;
+  width: map-get($piano, "width");
+  height: map-get($piano, "height");
+}

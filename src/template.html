@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" conten t="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+    />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <main class="piano">
+      <section class="diatonic-scale" aria-label="Middle Piano keys">
+        <!-- White Keys -->
+        <button
+          class="key-white"
+          data-key="C4"
+          aria-label="Note C, Press A to play this note"
+          aria-pressed="false"
+        >
+          <span class="hint">A</span>
+        </button>
+        <button
+          class="key-white"
+          data-key="D4"
+          aria-label="Note D, Press B to play this note"
+          aria-pressed="false"
+        >
+          <span class="hint">B</span>
+        </button>
+        <button
+          class="key-white"
+          data-key="E4"
+          aria-label="Note E, Press C to play this note"
+          aria-pressed="false"
+        >
+          <span class="hint">C</span>
+        </button>
+        <button
+          class="key-white"
+          data-key="F4"
+          aria-label="Note F, Press D to play this note"
+          aria-pressed="false"
+        >
+          <span class="hint">D</span>
+        </button>
+        <button
+          class="key-white"
+          data-key="G4"
+          aria-label="Note G, Press E to play this note"
+          aria-pressed="false"
+        >
+          <span class="hint">E</span>
+        </button>
+        <button
+          class="key-white"
+          data-key="A4"
+          aria-label="Note A, Press F to play this note"
+          aria-pressed="false"
+        >
+          <span class="hint">F</span>
+        </button>
+        <button
+          class="key-white"
+          data-key="B4"
+          aria-label="Note B, Press G to play this note"
+          aria-pressed="false"
+        >
+          <span class="hint">G</span>
+        </button>
+        <!-- Black Keys -->
+        <button
+          class="key-black"
+          data-key="Db4"
+          aria-label="Note D flat, Press Q to play"
+          aria-pressed="false"
+        >
+          <div class="hint">Q</div>
+        </button>
+        <button
+          class="key-black"
+          data-key="Eb4"
+          aria-label="Note E flat, Press W to play"
+          aria-pressed="false"
+        >
+          <div class="hint">W</div>
+        </button>
+        <button
+          class="key-black"
+          data-key="Gb4"
+          aria-label="Note G flat, Press E to play"
+          aria-pressed="false"
+        >
+          <div class="hint">E</div>
+        </button>
+        <button
+          class="key-black"
+          data-key="Ab4"
+          aria-label="Note A flat, Press R to play"
+          aria-pressed="false"
+        >
+          <div class="hint">R</div>
+        </button>
+        <button
+          class="key-black"
+          data-key="Bb4"
+          aria-label="Note B flat, Press T to play"
+          aria-pressed="false"
+        >
+          <div class="hint">T</div>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

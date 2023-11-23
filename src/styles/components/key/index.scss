@@ -1,0 +1,84 @@
+@use "sass:map";
+.key {
+  //key-black
+  &-black {
+    position: absolute;
+    top: 0;
+    width: map.get($piano, "keys", "black", "width");
+    height: map.get($piano, "keys", "black", "height");
+    box-shadow:
+      0px 0px 0px 62px rgba(map.get($theme, "primary"), 0.65) inset,
+      -11px 4px 10px 0px rgba(0, 0, 0, 0.55) inset,
+      12px -19px 10px 0px rgba(0, 0, 0, 0.55) inset;
+    border-radius: 0 0 10px 10px;
+    border: 0;
+
+    &.is-pressed {
+      transition: transform 0.2s;
+      transform: perspective(1500px) rotateX(-6deg);
+      transform-origin: top;
+    }
+
+    &:nth-of-type(8) {
+      position: absolute;
+      left: 53px;
+    }
+
+    &:nth-child(9) {
+      left: 148px;
+    }
+
+    &:nth-child(10) {
+      left: 302px;
+    }
+
+    &:nth-child(11) {
+      left: 395px;
+    }
+
+    &:nth-child(12) {
+      left: 492px;
+    }
+
+    .hint {
+      color: map.get($theme, "tertiary");
+      position: absolute;
+      top: 20px;
+      left: 0;
+      text-align: center;
+      width: 100%;
+    }
+  }
+  //key-white
+  &-white {
+    background: map.get($theme, "secondary");
+    width: map.get($piano, "keys", "white", "width");
+    border: 1px solid map.get($theme, "primary");
+    height: 100%;
+    position: relative;
+
+    &.is-pressed {
+      transition: transform 0.2s;
+      transform: perspective(330px) rotateX(-2deg);
+      transform-origin: top;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 20px;
+      background: map.get($theme, "secondary");
+      bottom: -22px;
+      left: -3px;
+      border: 1px solid map.get($theme, "primary");
+      border-top: 2px solid map.get($theme, "tertiary");
+      position: absolute;
+      transform: skew(350deg);
+    }
+
+    .hint {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+}
